@@ -1,6 +1,6 @@
 {
-	"name":"avisota/contao-message-element-hyperlink",
-	"description":"The hyperlink message element.",
+	"name":"avisota/contao-message-element-download",
+	"description":"The download message element.",
 	"keywords":["avisota", "email", "mail", "newsletter", "marketing"],
 	"type":"contao-module",
 	"homepage":"http://avisota.org",
@@ -19,7 +19,7 @@
 		"forum":"https://community.contao.org/de/forumdisplay.php?121-Avisota",
 		"wiki":"http://de.contaowiki.org/Kategorie:Avisota",
 		"irc":"irc://irc.freenode.org/avisota",
-		"source":"https://github.com/avisota/contao-message-element-hyperlink"
+		"source":"https://github.com/avisota/contao-message-element-download"
 	},
 	"require":{
 		"php":">=5.3",
@@ -42,11 +42,11 @@
 	"extra": {
 		"contao": {
 			"sources": {
-				"module": "system/modules/avisota-message-element-hyperlink"
+				"module": "system/modules/avisota-message-element-download"
 			},
 			"transifex": {
 				"project": "avisota-contao",
-				"prefix": "contao-message-element-hyperlink",
+				"prefix": "contao-message-element-download",
 				"languages_cto": "module/languages",
 				"languages_tx": ".tx"
 			}
