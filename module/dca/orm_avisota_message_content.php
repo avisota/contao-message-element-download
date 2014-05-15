@@ -28,12 +28,12 @@ $GLOBALS['TL_DCA']['orm_avisota_message_content']['metapalettes']['download'] = 
 
 $GLOBALS['TL_DCA']['orm_avisota_message_content']['fields']['downloadSource'] = array
 (
-	'label'       => &$GLOBALS['TL_LANG']['orm_avisota_message_content']['downloadSource'],
+	'label'     => &$GLOBALS['TL_LANG']['orm_avisota_message_content']['downloadSource'],
 	'exclude'   => true,
 	'inputType' => 'fileTree',
 	'eval'      => array('fieldType' => 'radio', 'files' => true, 'mandatory' => true, 'tl_class' => 'clr')
 );
-$GLOBALS['TL_DCA']['orm_avisota_message_content']['fields']['downloadTitle']         = array
+$GLOBALS['TL_DCA']['orm_avisota_message_content']['fields']['downloadTitle']  = array
 (
 	'label'     => &$GLOBALS['TL_LANG']['orm_avisota_message_content']['downloadTitle'],
 	'exclude'   => true,
