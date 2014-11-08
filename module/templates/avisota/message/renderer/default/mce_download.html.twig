@@ -7,6 +7,9 @@
 
 {% block content %}
 	{% spaceless %}
+		{% if headline %}
+			<{{ hl }}>{{ headline }}</{{ hl }}>
+		{% endif %}
 		<span class="file">{{ mce.icon(downloadIcon) }} <a href="{{ downloadSource }}" target="_blank">{{ downloadTitle }}</a></span><span class="size"> ({{ downloadSize }})</span>
 	{% endspaceless %}
 {% endblock %}
