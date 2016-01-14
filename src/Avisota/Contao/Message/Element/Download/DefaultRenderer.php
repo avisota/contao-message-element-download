@@ -13,7 +13,6 @@
  * @filesource
  */
 
-
 namespace Avisota\Contao\Message\Element\Download;
 
 use Avisota\Contao\Core\Message\Renderer;
@@ -25,7 +24,6 @@ use Contao\Doctrine\ORM\Entity;
 use Contao\Doctrine\ORM\EntityAccessor;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-
 /**
  * Class DefaultRenderer
  *
@@ -35,54 +33,54 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  */
 class DefaultRenderer implements EventSubscriberInterface
 {
-	/**
-	 * {@inheritdoc}
-	 */
-	static public function getSubscribedEvents()
-	{
-		return array(
-			AvisotaMessageEvents::RENDER_MESSAGE_CONTENT => 'renderContent',
-		);
-	}
+    /**
+     * {@inheritdoc}
+     */
+    static public function getSubscribedEvents()
+    {
+        return array(
+            AvisotaMessageEvents::RENDER_MESSAGE_CONTENT => 'renderContent',
+        );
+    }
 
-	/**
-	 * Render a single message content element.
-	 *
-	 * @param MessageContent     $content
-	 * @param RecipientInterface $recipient
-	 *
-	 * @return string
-	 */
-	public function renderContent(RenderMessageContentEvent $event)
-	{
-		$content = $event->getMessageContent();
+    /**
+     * Render a single message content element.
+     *
+     * @param MessageContent     $content
+     * @param RecipientInterface $recipient
+     *
+     * @return string
+     */
+    public function renderContent(RenderMessageContentEvent $event)
+    {
+        $content = $event->getMessageContent();
 
-		if ($content->getType() != 'download' || $event->getRenderedContent()) {
-			return;
-		}
+        if ($content->getType() != 'download' || $event->getRenderedContent()) {
+            return;
+        }
 
-		/** @var EntityAccessor $entityAccessor */
-		$entityAccessor = $GLOBALS['container']['doctrine.orm.entityAccessor'];
+        /** @var EntityAccessor $entityAccessor */
+        $entityAccessor = $GLOBALS['container']['doctrine.orm.entityAccessor'];
 
-		$context                   = $entityAccessor->getProperties($content);
-		$context['downloadSource'] = \Compat::resolveFile($context['downloadSource']);
+        $context                   = $entityAccessor->getProperties($content);
+        $context['downloadSource'] = \Compat::resolveFile($context['downloadSource']);
 
-		$file = new \File($context['downloadSource'], true);
+        $file = new \File($context['downloadSource'], true);
 
-		if (!$file->exists()) {
-			return;
-		}
+        if (!$file->exists()) {
+            return;
+        }
 
-		$context['downloadSize'] = \System::getReadableSize(filesize(TL_ROOT . DIRECTORY_SEPARATOR . $context['downloadSource']));
-		$context['downloadIcon'] = 'assets/contao/images/' . $file->icon;
+        $context['downloadSize'] = \System::getReadableSize(filesize(TL_ROOT . DIRECTORY_SEPARATOR . $context['downloadSource']));
+        $context['downloadIcon'] = 'assets/contao/images/' . $file->icon;
 
-		if (empty($context['downloadTitle'])) {
-			$context['downloadTitle'] = basename($context['downloadSource']);
-		}
+        if (empty($context['downloadTitle'])) {
+            $context['downloadTitle'] = basename($context['downloadSource']);
+        }
 
-		$template = new \TwigTemplate('avisota/message/renderer/default/mce_download', 'html');
-		$buffer   = $template->parse($context);
+        $template = new \TwigTemplate('avisota/message/renderer/default/mce_download', 'html');
+        $buffer   = $template->parse($context);
 
-		$event->setRenderedContent($buffer);
-	}
+        $event->setRenderedContent($buffer);
+    }
 }

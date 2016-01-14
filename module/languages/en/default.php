@@ -13,8 +13,7 @@
  * @filesource
  */
 
-
 /**
  * Mailing content elements
  */
-$GLOBALS['TL_LANG']['MCE']['download']  = array('Download', 'Generates a link to download a file.');
+$GLOBALS['TL_LANG']['MCE']['download'] = array('Download', 'Generates a link to download a file.');
