@@ -13,19 +13,17 @@
  * @filesource
  */
 
-
 /**
  * Fields
  */
 $GLOBALS['TL_LANG']['orm_avisota_message_content']['downloadSource'] = array(
-	'File',
-	'Chose the download file.'
+    'File',
+    'Chose the download file.'
 );
 $GLOBALS['TL_LANG']['orm_avisota_message_content']['downloadTitle']  = array(
-	'Title',
-	'Define a custom download title.'
+    'Title',
+    'Define a custom download title.'
 );
-
 
 /**
  * Legends
