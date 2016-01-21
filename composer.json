@@ -49,19 +49,13 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Avisota\\Contao\\Message\\Element\\Download": "src/"
+            "Avisota\\Contao\\Message\\Element\\Download\\": "src/"
         }
     },
     "extra": {
         "contao": {
             "sources": {
                 "contao": "system/modules/avisota-message-element-download"
-            },
-            "transifex": {
-                "project": "avisota-contao",
-                "prefix": "contao-message-element-download-",
-                "languages_cto": "contao/languages",
-                "languages_tx": ".tx"
             }
         },
         "branch-alias": {
