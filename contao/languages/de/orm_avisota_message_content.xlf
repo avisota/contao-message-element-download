@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="php" date="2014-05-06T04:04:27+02:00" original="orm_avisota_message_content" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="orm_avisota_message_content.downloadSource.0">
+        <source>File</source>
+        <target>Datei</target>
+        
+      </trans-unit>
+      <trans-unit id="orm_avisota_message_content.downloadSource.1">
+        <source>Chose the download file.</source>
+        <target>Bitte wählen Sie eine Download-Datei aus.</target>
+        
+      </trans-unit>
+      <trans-unit id="orm_avisota_message_content.downloadTitle.0">
+        <source>Title</source>
+        <target>Titel</target>
+        
+      </trans-unit>
+      <trans-unit id="orm_avisota_message_content.downloadTitle.1">
+        <source>Define a custom download title.</source>
+        <target>Legen Sie einen individuellen Titel für die Datei fest.</target>
+        
+      </trans-unit>
+      <trans-unit id="orm_avisota_message_content.download_legend">
+        <source>Download</source>
+        <target>Download</target>
+        
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
