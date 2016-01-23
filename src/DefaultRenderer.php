@@ -2,12 +2,12 @@
 
 /**
  * Avisota newsletter and mailing system
- * Copyright (C) 2013 Tristan Lins
+ * Copyright © 2016 Sven Baumann
  *
  * PHP version 5
  *
- * @copyright  bit3 UG 2013
- * @author     Tristan Lins <tristan.lins@bit3.de>
+ * @copyright  way.vision 2016
+ * @author     Sven Baumann <baumann.sv@gmail.com>
  * @package    avisota/contao-message-element-download
  * @license    LGPL-3.0+
  * @filesource
@@ -49,7 +49,7 @@ class DefaultRenderer implements EventSubscriberInterface
      *
      * @return array The event names to listen to
      */
-    static public function getSubscribedEvents()
+    public static function getSubscribedEvents()
     {
         return array(
             AvisotaMessageEvents::RENDER_MESSAGE_CONTENT => 'renderContent',
@@ -86,7 +86,9 @@ class DefaultRenderer implements EventSubscriberInterface
             return;
         }
 
-        $context['downloadSize'] = \System::getReadableSize(filesize(TL_ROOT . DIRECTORY_SEPARATOR . $context['downloadSource']));
+        $context['downloadSize'] = \System::getReadableSize(
+            filesize(TL_ROOT . DIRECTORY_SEPARATOR . $context['downloadSource'])
+        );
         $context['downloadIcon'] = 'assets/contao/images/' . $file->icon;
 
         if (empty($context['downloadTitle'])) {

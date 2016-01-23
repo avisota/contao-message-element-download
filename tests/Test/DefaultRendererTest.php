@@ -13,12 +13,16 @@
  * @filesource
  */
 
-/**
- * Message elements
- */
-$GLOBALS['TL_MCE']['files'][] = 'download';
+namespace Avisota\Test\Contao\Message\Element\Download;
 
 /**
- * Events
+ * Class DefaultRendererTest
+ *
+ * @package Avisota\Test\Contao\Message\Element\Download
  */
-$GLOBALS['TL_EVENT_SUBSCRIBERS'][] = 'Avisota\Contao\Message\Element\Download\DefaultRenderer';
+class DefaultRendererTest extends \PHPUnit_Framework_TestCase
+{
+    public function testRenderContent()
+    {
+    }
+}
