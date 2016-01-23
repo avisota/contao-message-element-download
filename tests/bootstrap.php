@@ -15,6 +15,11 @@
 
 error_reporting(E_ALL);
 
+/**
+ * @param $file
+ *
+ * @return bool|mixed
+ */
 function includeIfExists($file)
 {
     return file_exists($file) ? include $file : false;
