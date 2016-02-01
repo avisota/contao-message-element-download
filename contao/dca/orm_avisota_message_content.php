@@ -32,6 +32,7 @@ $GLOBALS['TL_DCA']['orm_avisota_message_content']['fields']['downloadSource'] = 
     'inputType' => 'fileTree',
     'eval'      => array('fieldType' => 'radio', 'files' => true, 'mandatory' => true, 'tl_class' => 'clr')
 );
+
 $GLOBALS['TL_DCA']['orm_avisota_message_content']['fields']['downloadTitle']  = array
 (
     'label'     => &$GLOBALS['TL_LANG']['orm_avisota_message_content']['downloadTitle'],
