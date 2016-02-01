@@ -68,6 +68,8 @@ class DefaultRenderer implements EventSubscriberInterface
      */
     public function renderContent(RenderMessageContentEvent $event)
     {
+        global $container;
+
         $content = $event->getMessageContent();
 
         if ($content->getType() != 'download' || $event->getRenderedContent()) {
@@ -75,7 +77,7 @@ class DefaultRenderer implements EventSubscriberInterface
         }
 
         /** @var EntityAccessor $entityAccessor */
-        $entityAccessor = $GLOBALS['container']['doctrine.orm.entityAccessor'];
+        $entityAccessor = $container['doctrine.orm.entityAccessor'];
 
         $context                   = $entityAccessor->getProperties($content);
         $context['downloadSource'] = \Compat::resolveFile($context['downloadSource']);
