@@ -3,10 +3,12 @@
     <body>
       <trans-unit id="MOD.avisota-message-element-download.0">
         <source>Avisota - Message element &quot;Download&quot;</source>
+        <target>Avisota - Elemento de mensagem &quot;Download&quot;</target>
         
       </trans-unit>
       <trans-unit id="MOD.avisota-message-element-download.1">
         <source>&quot;Download&quot; message element for Avisota messages.</source>
+        <target>Elemento de mensagem &quot;Download&quot; para mensagens Avisota.</target>
         
       </trans-unit>
     </body>
