@@ -3,6 +3,7 @@
     <body>
       <trans-unit id="orm_avisota_message_content.downloadSource.0">
         <source>File</source>
+        <target>Arquivo</target>
         
       </trans-unit>
       <trans-unit id="orm_avisota_message_content.downloadSource.1">
@@ -11,14 +12,17 @@
       </trans-unit>
       <trans-unit id="orm_avisota_message_content.downloadTitle.0">
         <source>Title</source>
+        <target>Título</target>
         
       </trans-unit>
       <trans-unit id="orm_avisota_message_content.downloadTitle.1">
         <source>Define a custom download title.</source>
+        <target>Defina um nome para o download personalizado.</target>
         
       </trans-unit>
       <trans-unit id="orm_avisota_message_content.download_legend">
         <source>Download</source>
+        <target>Download</target>
         
       </trans-unit>
     </body>

@@ -8,12 +8,13 @@
  *
  * @copyright  way.vision 2016
  * @author     Sven Baumann <baumann.sv@gmail.com>
- * @package    avisota/contao-message-element-download
+ * @package    avisota/contao-message-element-article
  * @license    LGPL-3.0+
  * @filesource
  */
 
-/**
- * Message elements
- */
-$GLOBALS['TL_MCE']['files'][] = 'download';
+use Avisota\Contao\Message\Element\Download\DefaultRenderer;
+
+return array(
+    new DefaultRenderer()
+);
