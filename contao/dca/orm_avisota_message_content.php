@@ -33,7 +33,7 @@ $GLOBALS['TL_DCA']['orm_avisota_message_content']['fields']['downloadSource'] = 
     'eval'      => array('fieldType' => 'radio', 'files' => true, 'mandatory' => true, 'tl_class' => 'clr')
 );
 
-$GLOBALS['TL_DCA']['orm_avisota_message_content']['fields']['downloadTitle']  = array
+$GLOBALS['TL_DCA']['orm_avisota_message_content']['fields']['downloadTitle'] = array
 (
     'label'     => &$GLOBALS['TL_LANG']['orm_avisota_message_content']['downloadTitle'],
     'exclude'   => true,
