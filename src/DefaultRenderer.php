@@ -88,6 +88,7 @@ class DefaultRenderer implements EventSubscriberInterface
             return;
         }
 
+        System::loadLanguageFile('default');
         $context['downloadSize'] = System::getReadableSize($file->size);
         $context['downloadIcon'] = 'assets/contao/images/' . $file->icon;
 
