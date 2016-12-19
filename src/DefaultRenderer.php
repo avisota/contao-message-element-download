@@ -88,13 +88,11 @@ class DefaultRenderer implements EventSubscriberInterface
             return;
         }
 
-        $context['downloadSize'] = System::getReadableSize(
-            filesize(TL_ROOT . DIRECTORY_SEPARATOR . $context['downloadSource'])
-        );
+        $context['downloadSize'] = System::getReadableSize($file->size);
         $context['downloadIcon'] = 'assets/contao/images/' . $file->icon;
 
         if (empty($context['downloadTitle'])) {
-            $context['downloadTitle'] = basename($context['downloadSource']);
+            $context['downloadTitle'] = basename($file->path);
         }
 
         $template = new \TwigTemplate('avisota/message/renderer/default/mce_download', 'html');
