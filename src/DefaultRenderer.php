@@ -72,7 +72,7 @@ class DefaultRenderer implements EventSubscriberInterface
 
         $content = $event->getMessageContent();
 
-        if ($content->getType() != 'download' || $event->getRenderedContent()) {
+        if ($content->getType() !== 'download' || $event->getRenderedContent()) {
             return;
         }
 
